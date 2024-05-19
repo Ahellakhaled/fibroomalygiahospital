@@ -32,10 +32,17 @@ class _DoctorSignUpState extends State<DoctorSignUp> {
   late final TextEditingController _nameController,
       _emailController,
       _passwordController,
+      _yearsOfExperineceController,
+      _licenseNoController,
+      _licensingOrganizationController,
       _confirmPasswordController;
+
   late final FocusNode _nameFocusNode,
       _emailFocusNode,
       _passwordFocusNode,
+      _yearsOfExperineceFocusNode,
+      _licenseNoFocusNode,
+      _licensingOrganizationFocusNode,
       _confirmPasswordFocusNode;
   late final _formKey = GlobalKey<FormState>();
   bool obscureText = true;
@@ -48,15 +55,23 @@ class _DoctorSignUpState extends State<DoctorSignUp> {
     _emailController = TextEditingController();
     _passwordController = TextEditingController();
     _confirmPasswordController = TextEditingController();
+    _yearsOfExperineceController = TextEditingController();
+    _licenseNoController = TextEditingController();
+    _licensingOrganizationController = TextEditingController();
     _nameFocusNode = FocusNode();
     _emailFocusNode = FocusNode();
     _passwordFocusNode = FocusNode();
     _confirmPasswordFocusNode = FocusNode();
+    _yearsOfExperineceFocusNode = FocusNode();
+    _licenseNoFocusNode = FocusNode();
+    _licensingOrganizationFocusNode = FocusNode();
     super.initState();
   }
 
   @override
   void dispose() {
+    _licenseNoController.dispose();
+    _licensingOrganizationController.dispose();
     _nameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
@@ -64,7 +79,11 @@ class _DoctorSignUpState extends State<DoctorSignUp> {
     _nameFocusNode.dispose();
     _emailFocusNode.dispose();
     _passwordFocusNode.dispose();
+    _yearsOfExperineceController.dispose();
     _confirmPasswordFocusNode.dispose();
+    _yearsOfExperineceFocusNode.dispose();
+    _licenseNoFocusNode.dispose();
+    _licensingOrganizationFocusNode.dispose();
     super.dispose();
   }
 
@@ -224,6 +243,55 @@ class _DoctorSignUpState extends State<DoctorSignUp> {
                                           value);
                                     },
                                   ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  CustomTextFieldTwo(
+                                    controller: _yearsOfExperineceController,
+                                    focusNode:  _yearsOfExperineceFocusNode,
+                                    textInputAction: TextInputAction.next,
+                                    keyboardType: TextInputType.visiblePassword,
+                                    obscureText: obscureText,
+                                    labelText: 'Years of Experience',
+                                    prefixIcon: IconlyLight.activity,
+                                    validator: (value) {
+                                      return Validators.passwordValidator(
+                                          value);
+                                    },
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  CustomTextFieldTwo(
+                                    controller: _licenseNoController,
+                                    focusNode: _licenseNoFocusNode,
+                                    textInputAction: TextInputAction.next,
+                                    keyboardType: TextInputType.visiblePassword,
+                                    obscureText: obscureText,
+                                    labelText: 'License No.',
+                                    prefixIcon: IconlyLight.document,
+                                    validator: (value) {
+                                      return Validators.passwordValidator(
+                                          value);
+                                    },
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  CustomTextFieldTwo(
+                                    controller:  _licensingOrganizationController,
+                                    focusNode:  _licensingOrganizationFocusNode,
+                                    textInputAction: TextInputAction.next,
+                                    keyboardType: TextInputType.visiblePassword,
+                                    obscureText: obscureText,
+                                    labelText: 'Licensing Organization',
+                                    prefixIcon: IconlyLight.bookmark,
+                                    validator: (value) {
+                                      return Validators.passwordValidator(
+                                          value);
+                                    },
+                                  ),
+
                                   const SizedBox(
                                     height: 10,
                                   ),

@@ -37,4 +37,32 @@ class Validators {
   //   }
   //   return null;
   // }
+  static String? displayAddressvalidator(String? displayAddress) {
+    if (displayAddress == null || displayAddress.isEmpty) {
+      return 'Display Address cannot be empty';
+    }
+    if (displayAddress.length < 50 || displayAddress.length > 255) {
+      return 'Display Address must be between 50 and 255 characters';
+    }
+
+    return null; // Return null if display name is valid
+  }
+  static String? contactNumberValidator(String? value) {
+    if (value!.isEmpty) {
+      return 'Please enter contactNumber';
+    }
+    if (value.length < 11) {
+      return 'contactNumber must be 11 characters long';
+    }
+    return null;
+  }
+  static String? cardNumberValidator(String? value) {
+    if (value!.isEmpty) {
+      return 'Please enter card number';
+    }
+    if (value.length != 16) {
+      return 'Password must be 16 characters ';
+    }
+    return null;
+  }
 }

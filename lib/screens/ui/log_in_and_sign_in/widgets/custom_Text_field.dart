@@ -85,6 +85,7 @@ class CustomTextFieldTwo extends StatelessWidget {
   final bool? obscureText;
   final void Function(String)? onFieldSubmitted;
   final String? labelText;
+  final String? hintText;
 
   const CustomTextFieldTwo({
     super.key,
@@ -98,6 +99,8 @@ class CustomTextFieldTwo extends StatelessWidget {
     this.suffixIcon,
     this.onFieldSubmitted,
     this.labelText,
+    this.hintText,
+
   });
 
   @override

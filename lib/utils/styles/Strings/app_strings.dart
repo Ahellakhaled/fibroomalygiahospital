@@ -2,6 +2,8 @@ class AppStrings {
   static const String fibromyalgiaHospital = 'Fibromyalgia\nHospital';
   static const String myCart = 'My Cart';
   static const String myCartScreenTitle = 'No orders placed yet';
+  static const String informationtitle = 'Protect Your Self';
+  static const String information = 'Some Information To Protect Yourself';
   static const String myCartScreenDesc = 'Place your first order now.';
   static const String shopNow = 'Shop Now';
   static const String enableLocationServices = 'Enable Location Services';
@@ -200,13 +202,44 @@ class AppStrings {
   static const String helpCenterNumber6Desc =
       "1- You can Text support service's team.\n2- You can rate Doctors & Equipments.";
   static const String backButtom = "Back";
+  static const String information1Tittle = 'Definition:';
+  static const String information1Desc = 'Fibromyalgia is a chronic disorder characterized by widespread musculoskeletal pain, fatigue, and tenderness in localized areas. The pain is often described as a constant dull ache, typically arising from the muscles.';
+  static const String information2Tittle = 'Symptoms:';
+  static const String information2Desc= '1. Widespread Pain: A hallmark symptom, often described as a constant dull ache that has lasted for at least three months. To be considered widespread, the pain must occur on both sides of the body and above and below the waist';
+  static const String information2Desc1= '2. Fatigue: People with fibromyalgia often wake up tired, even though they report sleeping for long periods. Sleep is frequently disrupted by pain, and many patients with fibromyalgia have other sleep disorders, such as restless legs syndrome and sleep apnea.';
+  static const String information2Desc2 = '3. Cognitive Difficulties: Often referred to as "fibro fog," this symptom impairs the ability to focus, pay attention, and concentrate on mental tasks.';
+  static const String information2Desc3 = '4. Other Symptoms: These may include headaches, depression, and anxiety, as well as irritable bowel syndrome (IBS).';
+  static const String information3Tittle = 'Causes:';
+  static const String information3Desc = 'The exact cause of fibromyalgia is unknown, but it is believed to involve a variety of factors working together, such as:';
+  static const String information3Desc1 = '1. Genetics: The disorder tends to run in families, so there may be certain genetic mutations that make an individual more susceptible to developing the disorder.';
+  static const String information3Desc2= '2. Infections: Some illnesses appear to trigger or aggravate fibromyalgia.';
+  static const String information3Desc3 = '3. Physical or Emotional Trauma: Post-traumatic stress disorder has been linked to fibromyalgia.';
+  static const String information4Tittle = 'Risk Factors:';
+  static const String information4Desc='1. Sex: Fibromyalgia is diagnosed more often in women than in men.';
+  static const String information4Desc1='2. Family History: You may be more likely to develop fibromyalgia if a relative also has the condition.';
+  static const String information4Desc2='3. Other Disorders: If you have osteoarthritis, rheumatoid arthritis, or lupus, you may be more likely to develop fibromyalgia.';
+  static const String information5Tittle = 'Diagnosis:';
+  static const String information5Desc='There is no single test to diagnose fibromyalgia. Instead, diagnosis is usually based on:';
+  static const String information5Desc1='1. Medical History and Physical Examination: Reviewing symptoms and medical history and conducting a physical examination.';
+  static const String information5Desc2='2. Widespread Pain Index (WPI) and Symptom Severity Scale (SS): These tools are used to measure the extent and severity of pain and other symptoms.';
+  static const String information6Tittle = 'Treatment:';
+  static const String information6Desc='While there is no cure for fibromyalgia, a variety of medications and lifestyle strategies can help manage symptoms:';
+  static const String information6Desc1='1. Medications:\n1 - Pain relievers (e.g., acetaminophen, ibuprofen)\n2- Antidepressants (e.g., duloxetine, milnacipran)\n3 - Anti-seizure drugs (e.g., pregabalin, gabapentin)';
+  static const String information6Desc2='2. Therapies: \n - Physical Therapy: Exercises that improve strength, flexibility, and stamina.\n1  - Occupational Therapy: Helps to make adjustments in work and home environments.\n2 - Counseling: Cognitive behavioral therapy (CBT) can help in managing stress and symptoms.';
+  static const String information6Desc3='3. Lifestyle and Home Remedies:\n  - Stress management techniques (e.g., yoga, meditation)\n1  - Regular physical activity \n2 - Adequate sleep \n3- Healthy diet';
+  static const String information7Tittle = 'Statistics:';
+  static const String information7Desc='1. Prevalence: Fibromyalgia affects about 1% to 2.7% of the global population.';
+  static const String information7Desc1='2. Gender Disparity: Women are more likely to be diagnosed with fibromyalgia than men.';
+  static const String information7Desc2='3. Impact: It is a leading cause of disability and is often associated with significant healthcare costs and reduced quality of life.';
 
 
 
 
 
 
-  // static const String = '';
+
+
+// static const String = '';
   // static const String = '';
   // static const String = '';
 }

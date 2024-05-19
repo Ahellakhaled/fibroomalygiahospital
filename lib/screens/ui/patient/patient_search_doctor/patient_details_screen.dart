@@ -8,6 +8,7 @@ import 'package:fibrohospital/utils/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../core/constants/validators.dart';
 import '../../../ahella/Features/Diagnostics/Presentation/views/diagonstics_tests_view.dart';
 
 class PatientDetailsScreen extends StatefulWidget {
@@ -20,15 +21,42 @@ class PatientDetailsScreen extends StatefulWidget {
 
 class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
   Object? val = -1;
-  TextEditingController? patientNameController = TextEditingController();
+  late final TextEditingController _patientNameController;
+  late final TextEditingController _patientContactNumberController;
+  late final TextEditingController _patientAgeController;
+  late final TextEditingController _patientEmailController;
+  late final FocusNode _patientNameFocusNode;
+  late final FocusNode _patientContactNumberFocusNode;
+  late final FocusNode _patientAgeFocusNode;
+  late final FocusNode _patientEmailFocusNode;
+  late final _formKey = GlobalKey<FormState>();
+  bool _isLoading = false;
+  bool obscureText = true;
+  @override
+  void initState() {
+    _patientNameController = TextEditingController();
+    _patientContactNumberController = TextEditingController();
+    _patientAgeController =  TextEditingController();
+    _patientEmailController =  TextEditingController();
+    _patientNameFocusNode = FocusNode();
+    _patientContactNumberFocusNode = FocusNode();
+    _patientAgeFocusNode =  FocusNode();
+    _patientEmailFocusNode=  FocusNode();
+    super.initState();
+  }
 
-  TextEditingController? patientContactNumberController =
-      TextEditingController();
-
-  TextEditingController? patientAgeController = TextEditingController();
-
-  TextEditingController? patientEmailController = TextEditingController();
-
+  @override
+  void dispose() {
+    _patientNameController.dispose();
+    _patientContactNumberController.dispose();
+    _patientAgeController.dispose();
+    _patientEmailController.dispose();
+    _patientNameFocusNode.dispose();
+    _patientContactNumberFocusNode.dispose();
+    _patientAgeFocusNode.dispose();
+    _patientEmailFocusNode.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,9 +103,11 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           CustomProfileTextField(
-                            icon: Iconsax.personalcard,
-                            labelName: AppStrings.patientName,
-                            pController: patientNameController,
+                              icon: Iconsax.personalcard,
+                              labelName: AppStrings.patientName,
+                              pController: _patientNameController,
+                              textInputAction: TextInputAction.next,
+                              focusNode:_patientNameFocusNode
                           ),
                           const SizedBox(
                             height: 20,
@@ -85,7 +115,9 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
                           CustomProfileTextField(
                             icon: Icons.date_range,
                             labelName: AppStrings.age,
-                            pController: patientAgeController,
+                            pController: _patientAgeController,
+                            focusNode:_patientAgeFocusNode,
+                            textInputAction: TextInputAction.next,
                           ),
                           const SizedBox(
                             height: 20,
@@ -170,7 +202,9 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
                           CustomProfileTextField(
                             icon: Icons.phone,
                             labelName: AppStrings.contactNumber,
-                            pController: patientContactNumberController,
+                            pController: _patientContactNumberController,
+                            focusNode: _patientContactNumberFocusNode,
+                            textInputAction: TextInputAction.next,
                           ),
                           const SizedBox(
                             height: 20,
@@ -178,7 +212,12 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
                           CustomProfileTextField(
                             icon: Icons.email,
                             labelName: AppStrings.email,
-                            pController: patientEmailController,
+                            pController: _patientEmailController,
+                            focusNode: _patientEmailFocusNode,
+                            textInputAction: TextInputAction.next,
+                            validator: (value) {
+                              return Validators.emailValidator(value);
+                            },
                           ),
                           const SizedBox(
                             height: 20,
