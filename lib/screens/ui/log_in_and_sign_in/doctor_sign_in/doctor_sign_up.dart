@@ -18,6 +18,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconly/iconly.dart';
 
+import '../../patient/patient_home/widgets/custom_add_record_show_model.dart';
+
 class DoctorSignUp extends StatefulWidget {
   static const String routeName = 'DoctorSignUp';
 
@@ -291,6 +293,26 @@ class _DoctorSignUpState extends State<DoctorSignUp> {
                                           value);
                                     },
                                   ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  ElevatedButton(
+                                    child:Text('Upload CV. *'),
+                                    onPressed: () {
+                                      showModalBottomSheet(
+                                        context: context,
+                                        shape: const RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(40),
+                                            topRight: Radius.circular(40),
+                                          ),
+                                        ),
+                                        builder: (context) {
+                                          return const CustomAddRecordShowModel();
+                                        },
+
+                                      );
+                                    },),
 
                                   const SizedBox(
                                     height: 10,

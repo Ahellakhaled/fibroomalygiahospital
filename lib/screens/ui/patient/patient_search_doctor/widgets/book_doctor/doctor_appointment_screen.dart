@@ -11,6 +11,8 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../../../utils/widgets/custom_arrow_back.dart';
+import '../whopatientcontainer.dart';
+import '../whopatientmodel.dart';
 
 class DoctorAppointmentScreen extends StatefulWidget {
   DoctorAppointmentScreen({super.key});
@@ -206,41 +208,18 @@ class _DoctorAppointmentScreenState extends State<DoctorAppointmentScreen> {
                   SizedBox(
                       height: height * .2,
                       width: width,
-                      child: ListView.builder(
-                        itemCount: 10,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          return Padding(
-                            padding: const EdgeInsets.only(right: 15.0),
-                            child: Container(
-                              width: width * .4,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  color: AppColors.whiteColor),
-                              child: Column(
-                                mainAxisAlignment:
-                                MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    AppAssets.doctorPhoto,
-                                    width: width,
-                                    height: height*.14,
 
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  const Text(
-                                    'My self',
-                                    style: AppTextStyle.styleMedium18,
-                                  ),
-
-                                ],
-                              ),
-                            ),
-                          );
-                        },
-                      )),
+          child: ListView.builder(
+            itemCount: WhoIsPatientModel.pharmaModelAll.length,
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+              return WhoPatientContainer(
+                index: index,
+                patientmodel: WhoIsPatientModel
+                    .pharmaModelAll[index],
+              );
+            },
+          )),
                   const Expanded(child: SizedBox()),
                   Center(child: CustomButton(text: AppStrings.continueText,onTap: (){
                     Navigator.pushReplacementNamed(context, DoctorAppointmentScreen2.routeName);

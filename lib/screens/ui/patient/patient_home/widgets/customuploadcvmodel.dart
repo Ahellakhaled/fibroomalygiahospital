@@ -4,8 +4,8 @@ import 'package:fibrohospital/utils/styles/colors/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-class CustomAddRecordShowModel extends StatelessWidget {
-  const CustomAddRecordShowModel({super.key});
+class CustomUploadCvModel extends StatelessWidget {
+  const CustomUploadCvModel({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +18,12 @@ class CustomAddRecordShowModel extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
-              child: Flexible(
-                child: Container(
-                  height: 5,
-                  width: 100,
-                  decoration: BoxDecoration(
-                      color: AppColors.greyTextColor,
-                      borderRadius: BorderRadius.circular(40)),
-                ),
+              child: Container(
+                height: 5,
+                width: 100,
+                decoration: BoxDecoration(
+                    color: AppColors.greyTextColor,
+                    borderRadius: BorderRadius.circular(40)),
               ),
             ),
             const Padding(
