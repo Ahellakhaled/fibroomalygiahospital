@@ -78,9 +78,6 @@ class _PharmaciesScreenState extends State<PharmaciesScreen>
                             Tab(
                               text: 'Top Rated',
                             ),
-                            Tab(
-                              text: 'Nearest',
-                            ),
                           ],
                           controller: tabController,
                           indicatorSize: TabBarIndicatorSize.tab,
@@ -114,20 +111,6 @@ class _PharmaciesScreenState extends State<PharmaciesScreen>
                                       index: index,
                                       pharmamodel: Pharmaciesmodel
                                           .pharmaModelTopRatied[index],
-                                    );
-                                  },
-                                ),
-                              )),
-                              Center(
-                                  child: Expanded(
-                                child: ListView.builder(
-                                  itemCount: Pharmaciesmodel
-                                      .pharmaModelNeareast.length,
-                                  itemBuilder: (context, index) {
-                                    return CustomPharmaContainer(
-                                      index: index,
-                                      pharmamodel: Pharmaciesmodel
-                                          .pharmaModelNeareast[index],
                                     );
                                   },
                                 ),

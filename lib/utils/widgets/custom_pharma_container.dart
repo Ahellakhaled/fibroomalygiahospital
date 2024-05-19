@@ -6,6 +6,9 @@ import 'package:fibrohospital/utils/styles/colors/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
+import '../../screens/ui/general_screen/AleinScreen.dart';
+import '../../screens/ui/general_screen/Alserafyscreen.dart';
+import '../../screens/ui/general_screen/CAREscreen.dart';
 import '../../screens/ui/general_screen/ezabyscreen.dart';
 import '../../screens/ui/general_screen/pharmacies_model.dart';
 
@@ -49,6 +52,27 @@ class CustomPharmaContainer extends StatelessWidget {
                 MaterialPageRoute(
                     builder: (context) {
                       return NineteenPharmacy();
+                    }));
+          }
+          else if (index == 4){
+            Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) {
+                      return CarePharmacy();
+                    }));
+          }
+          else if (index == 5){
+            Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) {
+                      return AlserafiPharmacy();
+                    }));
+          }
+          else if (index == 6){
+            Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) {
+                      return AlAinPharmacy();
                     }));
           }
         },

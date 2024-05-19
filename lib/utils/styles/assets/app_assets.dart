@@ -37,6 +37,11 @@ class AppAssets {
   static const String seifLogo = 'assets/images/seif logo.jpg';
   static const String misrLogo = 'assets/images/misr.jpg';
   static const String pharmacyLogo = 'assets/images/pharmacy.jpg';
+  static const String CareLogo = 'assets/images/CAREpHARMA.png';
+  static const String AlserafiLogo = 'assets/images/elsarafi.png';
+  static const String AlAinLogo = 'assets/images/AleinPharma.png';
+
+
 
 
 

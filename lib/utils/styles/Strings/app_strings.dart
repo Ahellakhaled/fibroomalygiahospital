@@ -200,6 +200,8 @@ class AppStrings {
   static const String helpCenterNumber6Desc =
       "1- You can Text support service's team.\n2- You can rate Doctors & Equipments.";
   static const String backButtom = "Back";
+  static const String bookOnline = 'Book Online Consultation';
+  static const String bookOffline = 'Book Offline Examination';
 
 
 

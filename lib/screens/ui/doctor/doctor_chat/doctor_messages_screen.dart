@@ -122,10 +122,6 @@ class _PatientMessagesScreenState extends State<PatientMessagesScreen> {
                                   const SizedBox(
                                     width: 10,
                                   ),
-                                  const Icon(
-                                    Icons.mic,
-                                    color: AppColors.greyTextColor,
-                                  ),
                                   const SizedBox(
                                     width: 10,
                                   ),

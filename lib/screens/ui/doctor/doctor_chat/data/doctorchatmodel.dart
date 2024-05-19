@@ -12,11 +12,6 @@ class DoctorChatModel {
     required this.Time,
   });
   static List<DoctorChatModel> chat = [
-  DoctorChatModel(
-      Name: 'Ahmed Hassan',
-      imagePath: 'assets/images/mohmeddent.jpg',
-      Message: 'Hello Doctor',
-      Time: '10:00 Am'),
     DoctorChatModel(
         Name: 'Mazen Ehab',
         imagePath: 'assets/images/mazenpatient.jpg',
@@ -30,19 +25,19 @@ class DoctorChatModel {
   ];
   static List<DoctorChatModel> patient = [
   DoctorChatModel(
-  Name: ' Dr.Shady Ali ',
-  imagePath: 'assets/images/shadydent.png',
-  Message: 'Hello Dear Patient',
+      Name: 'Dr.Hossam ',
+      imagePath: 'assets/images/hossam-emara-psychiatry.jpg',
+  Message:'Hello Dear Patient',
   Time: '10:00 am'),
     DoctorChatModel(
-  Name: ' Dr.Mohamed Farag',
-  imagePath: 'assets/images/mohmeddent.jpg',
-  Message: 'Hello Dear Patient',
+        Name: 'Dr.Hany ',
+        imagePath: 'assets/images/hany-botrosimmu.jpg',
+  Message:'Hello Dear Patient',
   Time: '10:03 Am'),
     DoctorChatModel(
-        Name: ' Dr.Ahmed Nagy',
-        imagePath: 'assets/images/ahmednagydent.jpg',
-        Message: 'Hello Dear Patient',
+        Name: 'Dr.Mohamed ',
+        imagePath: 'assets/images/mohamed-farouk-saber-hematology.jpg',
+        Message:'HI Dear Patient',
         Time: '10:30 Am'),
 
   ];

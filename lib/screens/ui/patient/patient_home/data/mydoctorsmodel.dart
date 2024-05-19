@@ -19,9 +19,9 @@ class MyDoctorModel {
   });
   static List<MyDoctorModel> DoctorModel = [
     MyDoctorModel(
-      Name: 'Dr. Loai Emad',
-      imagePath: 'assets/images/loaiemaddent.jpg',
-      SubTittle: 'Dentist',
+      Name: 'Dr. Mohamed Ahmed',
+      imagePath: 'assets/images/mohamed-ahmed-mansour-nutrition.jpg',
+      SubTittle: 'Nutritionist',
       Description:
       '5 Years Experience',
       FirstRatio: '75 %',
@@ -29,9 +29,9 @@ class MyDoctorModel {
       Date: '8:00 pm today',
     ),
     MyDoctorModel(
-        Name: 'Dr. Ahmed Mohsen',
-        imagePath: 'assets/images/ahmedmohsenheart.png',
-        SubTittle: 'Specialist Cardiologist',
+        Name: 'Dr. Hossam emara',
+        imagePath: 'assets/images/hossam-emara-psychiatry.jpg',
+        SubTittle: ' Psychologist',
         Description:
         '7 Years Experience',
         FirstRatio: '80 %',
@@ -39,12 +39,12 @@ class MyDoctorModel {
         Date: 'Next Sunday At 2:00 pm'
     ),
     MyDoctorModel(
-      Name: 'Dr. Ahmed Shabaan',
-      imagePath: 'assets/images/ahmedshabaanphys.png',
-      SubTittle:'Physiotherapist',
+      Name:  'Dr.Amgad elhadad',
+      imagePath: 'assets/images/Amgad elhadad immu.jpeg',
+      SubTittle:'Immunologist',
       Description:
-      '10 Years Experience',
-      FirstRatio: '90 %',
+      '4 Years Experience',
+      FirstRatio: '70 %',
       SecRatio: '85 Patient',
       Date: '12:00 pm tomorrow',
     ),

@@ -23,35 +23,34 @@ class DiagnosticsModel {
   });
 
   static List<DiagnosticsModel> diagnostics = [
-    DiagnosticsModel(
-      title: 'Advanced Health Checkup',
-      subTitle: 'Ideal for individuals aged 21-40 years',
-      imageUrl: 'assets/ahella/diagnostics-1.png',
-      offer: '+ 10% Health cashback T&C',
-      tests: '69',
-      discount: '35% off',
-      priceBeforeDiscount: '\$ 358',
-      priceAfterDiscount: '\$ 330',
-    ),
-    DiagnosticsModel(
-      title: 'Working Women’s Health Checkup',
-      subTitle: 'Ideal for individuals aged 21-40 years',
-      imageUrl: 'assets/ahella/diagnostics-2.png',
-      offer: '+ 10% Health cashback T&C',
-      tests: '119',
-      discount: '35% off',
-      priceBeforeDiscount: '\$ 387',
-      priceAfterDiscount: '\$ 345',
-    ),
-    DiagnosticsModel(
-      title: 'Active Professional Health Checkup',
-      subTitle: 'Ideal for individuals aged 21-40 years',
-      imageUrl: 'assets/ahella/diagnostics-3.png',
-      offer: '+ 10% Health cashback T&C',
-      tests: '100',
-      discount: '35% off',
-      priceBeforeDiscount: '\$ 457',
-      priceAfterDiscount: '\$ 411',
-    ),
-  ];
+  DiagnosticsModel(
+  title: 'Advanced Health Checkup',
+  subTitle: 'Ideal for individuals aged 21-40 years',
+  imageUrl: 'assets/ahella/diagnostics-1.png',
+  offer: '+ 10% Health cashback T&C',
+  tests: '69',
+  discount: '35% off',
+  priceBeforeDiscount: ' 358 EGP',
+  priceAfterDiscount: '330 EGP',
+  ),
+  DiagnosticsModel(
+  title: 'Working Women’s Health Checkup',
+  subTitle: 'Ideal for individuals aged 21-40 years',
+  imageUrl: 'assets/ahella/diagnostics-2.png',
+  offer: '+ 10% Health cashback T&C',
+  tests: '119',
+  discount: '35% off',
+  priceBeforeDiscount: '387 EGP',
+  priceAfterDiscount: ' 345 EGP',
+  ),
+  DiagnosticsModel(
+  title: 'Active Professional Health Checkup',
+  subTitle: 'Ideal for individuals aged 21-40 years',
+  imageUrl: 'assets/ahella/diagnostics-3.png',
+  offer: '+ 10% Health cashback T&C',
+  tests: '100',
+  discount: '35% off',
+  priceBeforeDiscount: '457 EGP',
+  priceAfterDiscount: '411 EGP',
+  ),];
 }

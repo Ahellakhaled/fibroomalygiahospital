@@ -11,6 +11,8 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../../../utils/widgets/custom_arrow_back.dart';
+import '../../../../../ahella/Features/Payment/Presentation/views/widgets/visaoption.dart';
+import 'doctor_offline_appointment_screen_2.dart';
 
 class DoctorAppointmentScreen extends StatefulWidget {
   DoctorAppointmentScreen({super.key});
@@ -211,9 +213,25 @@ class _DoctorAppointmentScreenState extends State<DoctorAppointmentScreen> {
                         },
                       )),
                   const Expanded(child: SizedBox()),
-                  Center(child: CustomButton(text: AppStrings.continueText,onTap: (){
-                    Navigator.pushReplacementNamed(context, DoctorAppointmentScreen2.routeName);
-                  },)),
+                  Center(
+                    child:
+                    CustomButton(text: AppStrings.bookOnline,onTap: (){
+                      Navigator.pushNamed(context, DoctorAppointmentScreen2.routeName);
+                    },),
+
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Center(
+                      child:
+                      CustomButton(text: AppStrings.bookOffline,onTap: (){
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)
+                        {return DoctorOfflineAppointmentScreen2(index: 0,);}),);
+                        //Navigator.pushReplacementNamed(context, DoctorOfflineAppointmentScreen2.routeName);
+                     },
+                        ),
+                     ),
                   const SizedBox(height: 30,),
 
 

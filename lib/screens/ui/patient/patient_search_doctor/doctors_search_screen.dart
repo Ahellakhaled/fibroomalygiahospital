@@ -22,7 +22,7 @@ class _DoctorsSearchScreenState extends State<DoctorsSearchScreen>
 
   @override
   void initState() {
-    tabController = TabController(length: 4, vsync: this);
+    tabController = TabController(length: 6, vsync: this);
     super.initState();
   }
 
@@ -72,13 +72,19 @@ class _DoctorsSearchScreenState extends State<DoctorsSearchScreen>
                               text: 'All',
                             ),
                             Tab(
-                              text: 'Dentist',
+                              text: 'Rheumatology',
                             ),
                             Tab(
-                              text: 'Cardiology',
+                              text: 'Immunology',
                             ),
                             Tab(
-                              text: 'physio Therapy',
+                              text: 'Psychology',
+                            ),
+                            Tab(
+                              text: 'Hematology',
+                            ),
+                            Tab(
+                              text: 'Nutrition',
                             ),
                           ],
                           controller: tabController,
@@ -101,7 +107,7 @@ class _DoctorsSearchScreenState extends State<DoctorsSearchScreen>
                               Center(
                                   child: Expanded(
                                 child: ListView.builder(
-                                  itemCount: SearchModel.Dentist.length,
+                                  itemCount: SearchModel.Rheumatology.length,
                                   itemBuilder: (context, index) {
                                     return CustomSearchDoctorsContainer(index: index, Modelindex: 1,);
                                   },
@@ -110,7 +116,7 @@ class _DoctorsSearchScreenState extends State<DoctorsSearchScreen>
                               Center(
                                   child: Expanded(
                                 child: ListView.builder(
-                                  itemCount: SearchModel.Cardiology.length,
+                                  itemCount: SearchModel.Immunology.length,
                                   itemBuilder: (context, index) {
                                     return CustomSearchDoctorsContainer(index: index, Modelindex: 2,);
                                   },
@@ -119,12 +125,30 @@ class _DoctorsSearchScreenState extends State<DoctorsSearchScreen>
                               Center(
                                   child: Expanded(
                                 child: ListView.builder(
-                                  itemCount: SearchModel.physioTherapy.length,
+                                  itemCount: SearchModel.Psychology.length,
                                   itemBuilder: (context, index) {
                                     return CustomSearchDoctorsContainer(index: index, Modelindex: 3,);
                                   },
                                 ),
                               )),
+                              Center(
+                                  child: Expanded(
+                                    child: ListView.builder(
+                                      itemCount: SearchModel.Hematology.length,
+                                      itemBuilder: (context, index) {
+                                        return CustomSearchDoctorsContainer(index: index, Modelindex: 4,);
+                                      },
+                                    ),
+                                  )),
+                              Center(
+                                  child: Expanded(
+                                    child: ListView.builder(
+                                      itemCount: SearchModel.Nutrition.length,
+                                      itemBuilder: (context, index) {
+                                        return CustomSearchDoctorsContainer(index: index, Modelindex: 5,);
+                                      },
+                                    ),
+                                  )),
                             ],
                           ),
                         ),

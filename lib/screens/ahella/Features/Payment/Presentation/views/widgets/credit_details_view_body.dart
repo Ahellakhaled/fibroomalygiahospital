@@ -101,7 +101,7 @@ class CreditDetailsViewBody extends StatelessWidget {
                 const SizedBox(height: 9),
                 const CustomTextFormField(
                   keyboardType: TextInputType.name,
-                  hintText: 'Abdullah Mamun',
+                  hintText: ' Enter your Name',
                 ),
                 const SizedBox(height: 20),
                 const Text(
@@ -115,7 +115,7 @@ class CreditDetailsViewBody extends StatelessWidget {
                 const SizedBox(height: 9),
                 const CustomTextFormField(
                   keyboardType: TextInputType.emailAddress,
-                  hintText: 'itsmemamun1@gmail.com',
+                  hintText: 'AA@gmail.com',
                 ),
               ],
             ),

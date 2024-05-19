@@ -42,4 +42,37 @@ class docAppointmentModel {
     ),
 
   ];
+  static List<docAppointmentModel> offlineappointment= [
+  docAppointmentModel(
+  Time: '10:00 am',
+  Minutes: '6  \nHours '
+
+  ),
+  docAppointmentModel(
+  Time: '12:00 pm',
+  Minutes: '12 \nHours '
+
+  ),
+  docAppointmentModel(
+  Time: '2:00 pm',
+  Minutes: '18  \nHours '
+
+
+  ),
+  docAppointmentModel(
+  Time: '4:00 pm',
+  Minutes: '1  \nDay '
+
+  ),
+  docAppointmentModel(
+  Time: '6:00 pm',
+  Minutes: '2  \nDays'
+
+  ),
+  docAppointmentModel(
+  Time: '7:00 pm',
+  Minutes: '3  \nDays'
+  ),
+
+  ];
 }

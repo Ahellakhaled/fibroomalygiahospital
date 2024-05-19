@@ -12,36 +12,36 @@ class NewPopularDoctorModel {
 
   static List<NewPopularDoctorModel> PopularDoctor = [
     NewPopularDoctorModel(
-      Name: 'Dr. Medhat Hegazy',
-      imagePath: 'assets/images/medhathegazydent.png',
+      Name: 'Dr.Mohamed Ahmed',
+      imagePath: 'assets/images/mohamed-ahmed-mansour-nutrition.jpg',
       Description:
-      'Dentist',
+      'Nutritionist',
     ),
     NewPopularDoctorModel(
-      Name: 'Dr. Ahmed Salah',
-      imagePath: 'assets/images/ahmedsalahphys.png',
+      Name: 'Dr. Ahmed Hatem',
+      imagePath: 'assets/images/Dr-ahmed-hatemimmu.png',
       Description:
-      'Physiotherapist',
+      'Immunologist',
     ),
     NewPopularDoctorModel(
-      Name: 'Dr. Tarek Elsayed',
-      imagePath: 'assets/images/tarekelsayedheart.jpg',
+      Name: 'Dr. ElSayed Rageh',
+      imagePath: 'assets/images/elsayed-ragehRheumatology.jpg',
       Description:
-      'Specialist Cardiologist',
+      'Rheumatologist',
+    ),
+    NewPopularDoctorModel(
+      Name: 'Dr. Eslam Mohamed',
+      imagePath: 'assets/images/Eslam Mohamed El Zaeem Hemat.jpeg',
+      Description:
+      'Hematologist',
 
     ),
 
     NewPopularDoctorModel(
-      Name: 'Dr. Moamen Hussein',
-      imagePath: 'assets/images/moamenhussienphys.png',
+      Name: 'Dr. Hossam Emara',
+      imagePath: 'assets/images/hossam-emara-psychiatry.jpg',
       Description:
-      'Physiotherapist',
-    ),
-    NewPopularDoctorModel(
-      Name: 'Dr. Shady Ali',
-      imagePath: 'assets/images/shadydent.png',
-      Description:
-      'Dentist',
+      'Psychologist',
     ),
 
 
