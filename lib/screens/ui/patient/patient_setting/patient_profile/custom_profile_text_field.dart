@@ -5,11 +5,21 @@ class CustomProfileTextField extends StatefulWidget {
 
   final String? labelName ;
   final IconData icon ;
+  final FocusNode? focusNode;
+  final String? Function(String?)? validator;
+  final TextInputAction? textInputAction;
   TextEditingController ?pController = TextEditingController();
 
 
 
- CustomProfileTextField({super.key, this.labelName, required this.icon, this.pController});
+  CustomProfileTextField({super.key,
+    this.labelName,
+    required this.icon,
+    this.focusNode,
+    this.validator,
+    this.textInputAction,
+    this.pController});
+
 
   @override
   State<CustomProfileTextField> createState() => _CustomProfileTextFieldState();

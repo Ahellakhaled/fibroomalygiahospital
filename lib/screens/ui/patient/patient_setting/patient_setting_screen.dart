@@ -12,6 +12,8 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
+import '../../general_screen/information.dart';
+
 
 class PatientSettingScreen extends StatefulWidget {
   const PatientSettingScreen({super.key});
@@ -359,8 +361,9 @@ class _PatientSettingScreenState extends State<PatientSettingScreen> {
                         ),
                         InkWell(
                           onTap: () {
-                            Navigator.pushNamed(
-                                context, PrivacyAndPolicy.routeName);
+                            Navigator.pushReplacement(
+                                context, MaterialPageRoute(builder: (context)
+                                  {return  PrivacyAndPolicy();}));
                           },
                           child: ListTile(
                             leading: const CircleAvatar(
@@ -402,6 +405,37 @@ class _PatientSettingScreenState extends State<PatientSettingScreen> {
                             ),
                             title: Text(
                               AppStrings.helpCenter,
+                              style: AppTextStyle.styleMedium18
+                                  .copyWith(color: AppColors.greyTextColor),
+                            ),
+                            trailing: const RotatedBox(
+                                quarterTurns: 2,
+                                child: Icon(Icons.arrow_back_ios_new,
+                                    color: AppColors.greyTextColor)),
+                          ),
+                        ),
+                        Center(
+                          child: SizedBox(
+                            width: MediaQuery.of(context).size.width * .85,
+                            child: const Divider(
+                              color: AppColors.greyTextColor,
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)
+                            {return InformationAboutDisease();}));
+                          },
+                          child: ListTile(
+                            leading: const CircleAvatar(
+                              radius: 20,
+                              backgroundColor: AppColors.greenColor,
+                              child: Icon(Iconsax.book_square,
+                                  color: AppColors.whiteColor),
+                            ),
+                            title: Text(
+                              AppStrings.informationtitle,
                               style: AppTextStyle.styleMedium18
                                   .copyWith(color: AppColors.greyTextColor),
                             ),

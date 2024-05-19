@@ -14,6 +14,9 @@ import '../../../../../../utils/widgets/custom_arrow_back.dart';
 import '../../../../../ahella/Features/Payment/Presentation/views/widgets/visaoption.dart';
 import 'doctor_offline_appointment_screen_2.dart';
 
+import '../whopatientcontainer.dart';
+import '../whopatientmodel.dart';
+
 class DoctorAppointmentScreen extends StatefulWidget {
   DoctorAppointmentScreen({super.key});
   static const String routeName = 'DoctorAppointmentScreen';
@@ -23,10 +26,31 @@ class DoctorAppointmentScreen extends StatefulWidget {
 }
 
 class _DoctorAppointmentScreenState extends State<DoctorAppointmentScreen> {
-  TextEditingController ?patientNameController = TextEditingController();
+  late final TextEditingController _patientNameController;
+  late final TextEditingController _patientContactNumberController;
+  late final FocusNode _patientNameFocusNode;
+  late final FocusNode _patientContactNumberFocusNode;
+  late final _formKey = GlobalKey<FormState>();
+  bool _isLoading = false;
+  bool obscureText = true;
 
-  TextEditingController ?patientContactNumberController = TextEditingController();
+  @override
+  void initState() {
+    _patientNameController = TextEditingController();
+    _patientContactNumberController = TextEditingController();
+    _patientNameFocusNode = FocusNode();
+    _patientContactNumberFocusNode = FocusNode();
+    super.initState();
+  }
 
+  @override
+  void dispose() {
+    _patientNameController.dispose();
+    _patientContactNumberController.dispose();
+    _patientNameFocusNode.dispose();
+    _patientContactNumberFocusNode.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -164,11 +188,21 @@ class _DoctorAppointmentScreenState extends State<DoctorAppointmentScreen> {
                   const SizedBox(
                     height: 20,
                   ),
-                  CustomProfileTextField(icon: Iconsax.personalcard,labelName: AppStrings.patientName,
-                    pController: patientNameController,),
+                  CustomProfileTextField(
+                    icon: Iconsax.personalcard,
+                    labelName: AppStrings.patientName,
+                    pController: _patientNameController,
+                    focusNode:_patientNameFocusNode,
+                    textInputAction: TextInputAction.next,
+                  ),
                   const SizedBox(height: 10,),
-                   CustomProfileTextField(icon: Icons.phone,labelName: AppStrings.contactNumber,
-                     pController: patientContactNumberController,),
+                  CustomProfileTextField(
+                    icon: Icons.phone,
+                    labelName: AppStrings.contactNumber,
+                    pController: _patientContactNumberController,
+                    focusNode:_patientContactNumberFocusNode,
+                    textInputAction: TextInputAction.next,
+                  ),
                   const SizedBox(height: 20,),
                   const Text(AppStrings.whoPatient,style: AppTextStyle.styleMedium18,),
                   const SizedBox(
@@ -177,41 +211,18 @@ class _DoctorAppointmentScreenState extends State<DoctorAppointmentScreen> {
                   SizedBox(
                       height: height * .2,
                       width: width,
-                      child: ListView.builder(
-                        itemCount: 10,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          return Padding(
-                            padding: const EdgeInsets.only(right: 15.0),
-                            child: Container(
-                              width: width * .4,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  color: AppColors.whiteColor),
-                              child: Column(
-                                mainAxisAlignment:
-                                MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    AppAssets.doctorPhoto,
-                                    width: width,
-                                    height: height*.14,
 
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  const Text(
-                                    'My self',
-                                    style: AppTextStyle.styleMedium18,
-                                  ),
-
-                                ],
-                              ),
-                            ),
-                          );
-                        },
-                      )),
+          child: ListView.builder(
+            itemCount: WhoIsPatientModel.pharmaModelAll.length,
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+              return WhoPatientContainer(
+                index: index,
+                patientmodel: WhoIsPatientModel
+                    .pharmaModelAll[index],
+              );
+            },
+          )),
                   const Expanded(child: SizedBox()),
                   Center(
                     child:

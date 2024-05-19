@@ -6,11 +6,62 @@ import 'package:fibrohospital/screens/ahella/Features/Payment/Presentation/views
 import 'package:fibrohospital/screens/ahella/Features/Payment/Presentation/views/widgets/payment_option_is_selected_leading_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-class CreditDetailsViewBody extends StatelessWidget {
+
+import '../../../../../../ui/log_in_and_sign_in/widgets/custom_Text_field.dart';
+class CreditDetailsViewBody extends StatefulWidget {
   const CreditDetailsViewBody({
     super.key,
   });
 
+  @override
+  State<CreditDetailsViewBody> createState() => _CreditDetailsViewBodyState();
+}
+
+
+class _CreditDetailsViewBodyState extends State<CreditDetailsViewBody> {
+  late final TextEditingController _nameController;
+  late final TextEditingController _cardNumberController;
+  late final TextEditingController _emailController;
+  late final TextEditingController _expiryDate1Controller;
+  late final TextEditingController _expiryDate2Controller;
+  late final FocusNode _nameFocusNode;
+  late final FocusNode _cardNumberFocusNode;
+  late final FocusNode _emailFocusNode;
+  late final FocusNode _expiryDate1FocusNode;
+  late final FocusNode _expiryDate2FocusNode;
+
+  late final _formKey = GlobalKey<FormState>();
+  bool _isLoading = false;
+  bool obscureText = true;
+  @override
+  void initState() {
+    _nameController = TextEditingController();
+    _cardNumberController = TextEditingController();
+    _emailController = TextEditingController();
+    _expiryDate1Controller = TextEditingController();
+    _expiryDate2Controller = TextEditingController();
+    _expiryDate1FocusNode = FocusNode();
+    _expiryDate2FocusNode = FocusNode();
+    _cardNumberFocusNode = FocusNode();
+    _nameFocusNode = FocusNode();
+    _emailFocusNode = FocusNode();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _nameController.dispose();
+    _cardNumberController.dispose();
+    _emailController.dispose();
+    _expiryDate1Controller.dispose();
+    _expiryDate2Controller.dispose();
+    _expiryDate1FocusNode.dispose();
+    _expiryDate2FocusNode.dispose();
+    _cardNumberFocusNode.dispose();
+    _nameFocusNode.dispose();
+    _emailFocusNode.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -51,8 +102,10 @@ class CreditDetailsViewBody extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 9),
-                const CustomTextFormField(
+                 CustomTextFieldTwo(
                   keyboardType: TextInputType.number,
+                  controller: _cardNumberController,
+                  focusNode: _cardNumberFocusNode,
                   hintText: '+8801000000000',
                 ),
                 const SizedBox(height: 20),
@@ -65,22 +118,27 @@ class CreditDetailsViewBody extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 9),
-                const Row(
+               Row(
                   children: [
                     Expanded(
                       flex: 2,
-                      child: CustomTextFormField(
+                      child: CustomTextFieldTwo(
                         keyboardType: TextInputType.number,
+                        controller: _expiryDate1Controller,
+                        focusNode:_expiryDate1FocusNode,
                         hintText: 'Jan',
                         suffixIcon: Icon(Icons.keyboard_arrow_down),
                       ),
+
                     ),
                     SizedBox(width: 8),
                     Expanded(
                       flex: 2,
-                      child: CustomTextFormField(
+                      child: CustomTextFieldTwo(
                         keyboardType: TextInputType.number,
                         hintText: '2023',
+                        controller: _expiryDate2Controller,
+                        focusNode:_expiryDate2FocusNode,
                         suffixIcon: Icon(Icons.keyboard_arrow_down),
                       ),
                     ),
@@ -99,9 +157,11 @@ class CreditDetailsViewBody extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 9),
-                const CustomTextFormField(
+                CustomTextFieldTwo(
                   keyboardType: TextInputType.name,
+
                   hintText: ' Enter your Name',
+
                 ),
                 const SizedBox(height: 20),
                 const Text(
@@ -113,10 +173,10 @@ class CreditDetailsViewBody extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 9),
-                const CustomTextFormField(
+                CustomTextFieldTwo(
                   keyboardType: TextInputType.emailAddress,
                   hintText: 'AA@gmail.com',
-                ),
+ ),
               ],
             ),
           ),
