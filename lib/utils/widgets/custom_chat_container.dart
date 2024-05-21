@@ -26,24 +26,6 @@ class _CustomChatContainerState extends State<CustomChatContainer> {
     double width = MediaQuery.of(context).size.width;
     return Padding(
       padding: const EdgeInsets.only(bottom: 10.0),
-      child: Slidable(
-        endActionPane: ActionPane(
-          extentRatio: .3,
-          motion: const ScrollMotion(),
-          children: [
-            SlidableAction(
-              onPressed: (context) {},
-              borderRadius: const BorderRadius.only(
-                  bottomRight: Radius.circular(12),
-                  topRight: Radius.circular(12)),
-              backgroundColor: AppColors.greenColor,
-              foregroundColor: AppColors.whiteColor,
-              icon: Icons.phone,
-              label: 'Call',
-              autoClose: true,
-            ),
-          ],
-        ),
         child: Container(
           width: width,
           height: height * .1,
@@ -105,7 +87,7 @@ class _CustomChatContainerState extends State<CustomChatContainer> {
             ),
           ),
         ),
-      ),
-    );
+      );
+
   }
 }

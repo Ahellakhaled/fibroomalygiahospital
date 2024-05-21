@@ -264,7 +264,7 @@ class DoctorDetailsScreen extends StatelessWidget {
                           height: 20,
                         ),
                         const Text(
-                          AppStrings.services,
+                          AppStrings.Biography,
                           style: AppTextStyle.styleMedium18,
                         ),
                         const SizedBox(

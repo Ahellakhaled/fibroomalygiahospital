@@ -23,7 +23,7 @@ class AppStrings {
   static const String patientSignUpTitle = 'Join us now dear patient';
   static const String doctorSignUpTitle = 'Join us now dear doctor';
   static const String patientSignUpDesc =
-      'You can search course, apply course and find\nscholarship for abroad studies';
+      'Join Us Now For More Healthy Life \n';
   static const String google = 'Google';
   static const String facebook = 'Facebook';
   static const String name = 'Name';
@@ -234,6 +234,7 @@ class AppStrings {
   static const String information7Desc='1. Prevalence: Fibromyalgia affects about 1% to 2.7% of the global population.';
   static const String information7Desc1='2. Gender Disparity: Women are more likely to be diagnosed with fibromyalgia than men.';
   static const String information7Desc2='3. Impact: It is a leading cause of disability and is often associated with significant healthcare costs and reduced quality of life.';
+  static const String Biography = 'Biography';
 
 
 

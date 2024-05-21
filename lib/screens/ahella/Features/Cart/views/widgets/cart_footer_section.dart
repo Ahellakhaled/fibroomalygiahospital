@@ -17,7 +17,17 @@ class CartFooterSection extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       child: CustomElevatedButton(
         text: 'Go to Payment',
-        // onPressed: ()async {
+         onPressed: (){
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) =>const PaymentOptionsView()),);
+         }
+
+
+
+
+
+
+
+    //()async {
         //     BlocProvider.of<LogInCubit>(context).loginUser(
         //         context: context,
         //         formKey: _formKey,

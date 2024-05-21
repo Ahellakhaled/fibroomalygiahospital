@@ -78,19 +78,6 @@ class _DoctorMessageScreenState extends State<DoctorMessageScreen> {
                         ],
                       ),
                       const Expanded(child: SizedBox()),
-                      Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              color: AppColors.greenColor),
-                          child: IconButton(
-                              onPressed: () {},
-                              icon: const Icon(
-                                Icons.phone,
-                                color: AppColors.whiteColor,
-                              ))),
-                      const SizedBox(
-                        width: 20,
-                      ),
                     ],
                   ),
                 ),
